@@ -1,0 +1,30 @@
+import * as React from "react";
+
+export function Card({ className = "", ...props }: React.HTMLAttributes<HTMLDivElement>) {
+  return (
+    <div
+      className={`rounded-2xl border border-slate-200/80 bg-white/60 dark:border-slate-800/80 dark:bg-slate-950/60 backdrop-blur-md shadow-sm transition-all duration-300 ${className}`}
+      {...props}
+    />
+  );
+}
+
+export function CardHeader({ className = "", ...props }: React.HTMLAttributes<HTMLDivElement>) {
+  return <div className={`flex flex-col space-y-1.5 p-6 ${className}`} {...props} />;
+}
+
+export function CardTitle({ className = "", ...props }: React.HTMLAttributes<HTMLHeadingElement>) {
+  return <h3 className={`text-xl font-bold leading-none tracking-tight ${className}`} {...props} />;
+}
+
+export function CardDescription({ className = "", ...props }: React.HTMLAttributes<HTMLParagraphElement>) {
+  return <p className={`text-sm text-slate-500 dark:text-slate-400 leading-relaxed ${className}`} {...props} />;
+}
+
+export function CardContent({ className = "", ...props }: React.HTMLAttributes<HTMLDivElement>) {
+  return <div className={`p-6 pt-0 ${className}`} {...props} />;
+}
+
+export function CardFooter({ className = "", ...props }: React.HTMLAttributes<HTMLDivElement>) {
+  return <div className={`flex items-center p-6 pt-0 ${className}`} {...props} />;
+}
